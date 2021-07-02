@@ -41,6 +41,81 @@ bot.command('sports', (ctx) => {
     ctx.reply('Sports News Headlines are ->');
 })
 
+//Bussiness Headlines
+bot.command('business', (ctx) => {
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    .then(d => {
+        let headlines = d.data.articles;
+        headlines.forEach( headline => {
+            ctx.reply("=> " + headline.title);
+        });
+    })
+    .catch(err => {
+        console.log(err);
+      });
+    ctx.reply('Bussiness News Headlines are ->');
+})
+
+//Health Headlines
+bot.command('health', (ctx) => {
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    .then(d => {
+        let headlines = d.data.articles;
+        headlines.forEach( headline => {
+            ctx.reply("=> " + headline.title);
+        });
+    })
+    .catch(err => {
+        console.log(err);
+      });
+    ctx.reply('Health News Headlines are ->');
+})
+
+//Technology Headlines
+bot.command('technology', (ctx) => {
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    .then(d => {
+        let headlines = d.data.articles;
+        headlines.forEach( headline => {
+            ctx.reply("=> " + headline.title);
+        });
+    })
+    .catch(err => {
+        console.log(err);
+      });
+    ctx.reply('Technology News Headlines are ->');
+})
+
+//Entertainment Headlines
+bot.command('entertainment', (ctx) => {
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    .then(d => {
+        let headlines = d.data.articles;
+        headlines.forEach( headline => {
+            ctx.reply("=> " + headline.title);
+        });
+    })
+    .catch(err => {
+        console.log(err);
+      });
+    ctx.reply('Entertainment News Headlines are ->');
+})
+
+//Science Headlines
+bot.command('science', (ctx) => {
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    .then(d => {
+        let headlines = d.data.articles;
+        headlines.forEach( headline => {
+            ctx.reply("=> " + headline.title);
+        });
+    })
+    .catch(err => {
+        console.log(err);
+      });
+    ctx.reply('Science News Headlines are ->');
+})
+
 
 module.exports = bot
 
