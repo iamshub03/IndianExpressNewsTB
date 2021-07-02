@@ -18,7 +18,8 @@ bot.command('headlines', (ctx) => {
         headlines.forEach( headline => {
             if(headline.description)
             {
-                ctx.reply(`Title: ${headline.title}
+                ctx.reply(
+                `Title: ${headline.title}
                 
                 Description: ${headline.description}`);
             }
@@ -38,7 +39,8 @@ bot.command('sports', (ctx) => {
         headlines.forEach( headline => {
             if(headline.description)
             {
-                ctx.reply(`Title: ${headline.title}
+                ctx.reply(
+                `Title: ${headline.title}
                 
                 Description: ${headline.description}`);
             }
@@ -58,7 +60,8 @@ bot.command('business', (ctx) => {
         headlines.forEach( headline => {
             if(headline.description)
             {
-                ctx.reply(`Title: ${headline.title}
+                ctx.reply(
+                `Title: ${headline.title}
                 
                 Description: ${headline.description}`);
             }
@@ -78,7 +81,8 @@ bot.command('health', (ctx) => {
         headlines.forEach( headline => {
             if(headline.description)
             {
-                ctx.reply(`Title: ${headline.title}
+                ctx.reply(
+                `Title: ${headline.title}
                 
                 Description: ${headline.description}`);
             }
@@ -98,7 +102,8 @@ bot.command('technology', (ctx) => {
         headlines.forEach( headline => {
             if(headline.description)
             {
-                ctx.reply(`Title: ${headline.title}
+                ctx.reply(
+                `Title: ${headline.title}
                 
                 Description: ${headline.description}`);
             }
@@ -118,7 +123,8 @@ bot.command('entertainment', (ctx) => {
         headlines.forEach( headline => {
             if(headline.description)
             {
-                ctx.reply(`Title: ${headline.title}
+                ctx.reply(
+                `Title: ${headline.title}
                 
                 Description: ${headline.description}`);
             }
@@ -138,7 +144,8 @@ bot.command('science', (ctx) => {
         headlines.forEach( headline => {
             if(headline.description)
             {
-                ctx.reply(`Title: ${headline.title}
+                ctx.reply(
+                `Title: ${headline.title}
                 
                 Description: ${headline.description}`);
             }
