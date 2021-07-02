@@ -14,7 +14,7 @@ bot.command('headlines', (ctx) => {
         let headlines = d.data.articles;
         let i = 1;
         headlines.forEach(headline => {
-            resultData = i+ ". ". resultData + headline.title + ". /n"
+            resultData = resultData + i + ". " +headline.title
         });
         ctx.reply(resultData);
     })
