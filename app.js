@@ -13,7 +13,7 @@ bot.command('HeadLines_India', (ctx) => {
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach(headline => {
-            resultData += headline.title + "\n";
+            ctx.reply(headline.title);
         });
     })
     .catch(err => {
