@@ -12,8 +12,9 @@ bot.command('headlines', (ctx) => {
     axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
+        let i = 1;
         headlines.forEach(headline => {
-            resultData = resultData + headline.title + "."
+            resultData = "1. ". resultData + headline.title + ". /n"
         });
         ctx.reply(resultData);
     })
