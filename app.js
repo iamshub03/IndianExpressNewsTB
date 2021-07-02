@@ -11,13 +11,16 @@ bot.command('HeadLines_India', (ctx) => {
     axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
+        let resultData = ""
         headlines.forEach(headline => {
-            ctx.reply(headline.title);
+            resultData += headline.title + "\n";
         });
+        console.log(resultData);
     })
     .catch(err => {
         console.log(err);
       });
+    ctx.reply('News');
 })
 
 module.exports = bot
