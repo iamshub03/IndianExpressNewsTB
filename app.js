@@ -1,4 +1,5 @@
 const { Composer } = require('micro-bot')
+const axios = require('axios');
 
 const bot = new Composer()
 
@@ -7,11 +8,13 @@ bot.start((ctx) => {
 })
 
 bot.command('HeadLines_India', (ctx) => {
-    let headlines = fetch("https://newsapi.org/v2/top-headlines?country=in&apiKey=11ed06385db04616a8bb78a13c2708d6");
-    headlines.then(res => res.json())
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         ctx.reply(d);
     })
+    .catch(err => {
+        console.log(err);
+      });
 })
 
 module.exports = bot

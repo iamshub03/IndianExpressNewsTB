@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/iamshub03/IndianExpressNewsTB#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "micro-bot": "^2.5.3"
   }
 }
