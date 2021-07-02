@@ -15,7 +15,7 @@ bot.command('headlines', (ctx) => {
         let i = 1;
         headlines.forEach((headline, index) => {
             ++index;
-            ctx.reply(index + ". " + headline.title);
+            ctx.reply("=> " + headline.title);
         });
     })
     .catch(err => {
