@@ -14,14 +14,14 @@ bot.command('headlines', (ctx) => {
         let headlines = d.data.articles;
         let i = 1;
         headlines.forEach(headline => {
-            resultData = resultData + i + ". " +headline.title
+            ctx.reply(i + ". " + headline.title);
+            i++;
         });
-        ctx.reply(resultData);
     })
     .catch(err => {
         console.log(err);
       });
-    ctx.reply('News');
+    ctx.reply('News Headlines for India are ->');
 })
 
 module.exports = bot
