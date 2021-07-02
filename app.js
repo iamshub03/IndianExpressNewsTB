@@ -11,13 +11,13 @@ bot.start((ctx) => {
 //Headlines General
 bot.command('headlines', (ctx) => {
     let resultData = "";
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
         let i = 1;
         headlines.forEach((headline, index) => {
             ++index;
-            ctx.reply("=> " + headline.title);
+            ctx.reply("=> " + headline.description);
         });
     })
     .catch(err => {
@@ -28,11 +28,11 @@ bot.command('headlines', (ctx) => {
 
 //Sports Headlines
 bot.command('sports', (ctx) => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&category=sports&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.title);
+            ctx.reply("=> " + headline.description);
         });
     })
     .catch(err => {
@@ -43,11 +43,11 @@ bot.command('sports', (ctx) => {
 
 //Bussiness Headlines
 bot.command('business', (ctx) => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&category=business&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.title);
+            ctx.reply("=> " + headline.description);
         });
     })
     .catch(err => {
@@ -58,11 +58,11 @@ bot.command('business', (ctx) => {
 
 //Health Headlines
 bot.command('health', (ctx) => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&category=health&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.title);
+            ctx.reply("=> " + headline.description);
         });
     })
     .catch(err => {
@@ -73,11 +73,11 @@ bot.command('health', (ctx) => {
 
 //Technology Headlines
 bot.command('technology', (ctx) => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&category=technology&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.title);
+            ctx.reply("=> " + headline.description);
         });
     })
     .catch(err => {
@@ -88,11 +88,11 @@ bot.command('technology', (ctx) => {
 
 //Entertainment Headlines
 bot.command('entertainment', (ctx) => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&category=entertainment&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.title);
+            ctx.reply("=> " + headline.description);
         });
     })
     .catch(err => {
@@ -103,11 +103,11 @@ bot.command('entertainment', (ctx) => {
 
 //Science Headlines
 bot.command('science', (ctx) => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=11ed06385db04616a8bb78a13c2708d6")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&category=science&apiKey=11ed06385db04616a8bb78a13c2708d6")
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.title);
+            ctx.reply("=> " + headline.description);
         });
     })
     .catch(err => {
