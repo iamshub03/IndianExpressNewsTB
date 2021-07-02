@@ -15,7 +15,7 @@ bot.command('HeadLines_India', (ctx) => {
         headlines.forEach(headline => {
             resultData += headline.title + "\n";
         });
-        console.log(resultData);
+        ctx.reply(resultData);
     })
     .catch(err => {
         console.log(err);
