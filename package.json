@@ -2,14 +2,22 @@
   "name": "indian-express-news-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "app,.js",
+  "main": "app.js",
   "scripts": {
+    "start": "micro-bot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamshub03/IndianExpressNewsTB.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamshub03/IndianExpressNewsTB/issues"
+  },
+  "homepage": "https://github.com/iamshub03/IndianExpressNewsTB#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
-    "telegraf": "^4.4.0"
+    "micro-bot": "^2.5.3"
   }
 }

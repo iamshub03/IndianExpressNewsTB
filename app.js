@@ -1,7 +1,8 @@
-require('dotenv').config();
-const { Telegraf } = require('telegraf');
+const { Composer } = require('micro-bot')
+
 const BOT_TOKEN = `1736249180:AAGKeMsDJlBqUWklOM5fsEog8isJIM_wUrU`;
-const bot = new Telegraf(BOT_TOKEN);
+
+const bot = new Composer()
 
 bot.command('start', ctx => {
     console.log(ctx.from)
@@ -10,4 +11,4 @@ bot.command('start', ctx => {
         .catch(err => console.log(err));
 })
 
-bot.launch();
+module.exports = bot
