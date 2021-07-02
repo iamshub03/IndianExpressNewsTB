@@ -15,9 +15,11 @@ bot.command('headlines', (ctx) => {
     .then(d => {
         let headlines = d.data.articles;
         let i = 1;
-        headlines.forEach((headline, index) => {
-            ++index;
-            ctx.reply("=> " + headline.description);
+        headlines.forEach( headline => {
+            if(headline.description)
+            {
+                ctx.reply("=> " + headline.description);
+            }
         });
     })
     .catch(err => {
@@ -32,7 +34,10 @@ bot.command('sports', (ctx) => {
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.description);
+            if(headline.description)
+            {
+                ctx.reply("=> " + headline.description);
+            }
         });
     })
     .catch(err => {
@@ -47,7 +52,10 @@ bot.command('business', (ctx) => {
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.description);
+            if(headline.description)
+            {
+                ctx.reply("=> " + headline.description);
+            }
         });
     })
     .catch(err => {
@@ -62,7 +70,10 @@ bot.command('health', (ctx) => {
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.description);
+            if(headline.description)
+            {
+                ctx.reply("=> " + headline.description);
+            }
         });
     })
     .catch(err => {
@@ -77,7 +88,10 @@ bot.command('technology', (ctx) => {
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.description);
+            if(headline.description)
+            {
+                ctx.reply("=> " + headline.description);
+            }
         });
     })
     .catch(err => {
@@ -92,7 +106,10 @@ bot.command('entertainment', (ctx) => {
     .then(d => {
         let headlines = d.data.articles;
         headlines.forEach( headline => {
-            ctx.reply("=> " + headline.description);
+            if(headline.description)
+            {
+                ctx.reply("=> " + headline.description);
+            }
         });
     })
     .catch(err => {
